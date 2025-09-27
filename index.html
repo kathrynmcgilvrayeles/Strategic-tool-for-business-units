@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L&D Strategic Toolkit for Business Units</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Define brand colours as CSS variables */
+        :root {
+            --brand-red: #ED0000;
+            --brand-grey-2: #F5F5F5;
+            --brand-grey-3: #E6E6E6;
+            --brand-grey-4: #B3B3B3;
+            --brand-grey-5: #4D4D4D;
+            --brand-black: #000000;
+            --brand-white: #FFFFFF;
+        }
+
+        /* Use Inter font as the default */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--brand-grey-2);
+        }
+
+        /* Custom styles for the tabs */
+        .tab-button {
+            transition: all 0.3s ease-in-out;
+            background-color: var(--brand-grey-3);
+            color: var(--brand-grey-5);
+            border-top-left-radius: 0.5rem; /* 8px */
+            border-top-right-radius: 0.5rem; /* 8px */
+            margin: 0 2px;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .tab-button.active {
+            background-color: var(--brand-red);
+            color: var(--brand-white);
+            font-weight: 600;
+        }
+        
+        /* Hide tab content by default */
+        .tab-content {
+            display: none;
+        }
+        
+        /* Show active tab content */
+        .tab-content.active {
+            display: block;
+        }
+        
+        .icon {
+            width: 48px;
+            height: 48px;
+            stroke-width: 1.5;
+        }
+
+        h3 {
+            color: var(--brand-grey-5);
+        }
+        
+        .space-button {
+            background-color: var(--brand-grey-5);
+            color: var(--brand-white);
+            font-size: 0.875rem; /* 14px */
+            font-weight: 500;
+            padding: 0.25rem 0.75rem; /* 4px 12px */
+            border-radius: 9999px; /* pill shape */
+            transition: all 0.2s ease-in-out;
+            border: 2px solid transparent;
+        }
+
+        .space-button:hover {
+            opacity: 0.9;
+        }
+
+        .space-button.active {
+            background-color: var(--brand-red);
+            color: var(--brand-white);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="antialiased text-gray-800">
+
+    <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-7xl">
+        
+        <!-- Header Section -->
+        <header class="text-center mb-8 md:mb-12">
+            <h1 class="text-3xl md:text-4xl font-bold text-black mb-2">Partnering with L&D</h1>
+            <p class="text-lg md:text-xl text-[color:var(--brand-grey-5)]">A Strategic Toolkit for Designing Business Unit Training</p>
+        </header>
+
+        <!-- Main Tabbed Interface -->
+        <div class="bg-white rounded-xl shadow-lg">
+
+            <!-- Tab Buttons -->
+            <div class="border-b border-[color:var(--brand-grey-3)] pt-2 px-2 bg-[color:var(--brand-grey-2)] rounded-t-xl">
+                <nav class="flex justify-center" aria-label="Tabs">
+                    <button class="tab-button flex-1 text-center px-4 py-3 text-sm sm:text-base font-medium active" data-tab="1">
+                        1. Foundational Content
+                    </button>
+                    <button class="tab-button flex-1 text-center px-4 py-3 text-sm sm:text-base font-medium" data-tab="2">
+                        2. Learning Environments
+                    </button>
+                    <button class="tab-button flex-1 text-center px-4 py-3 text-sm sm:text-base font-medium" data-tab="3">
+                        3. AI-Powered Learning
+                    </button>
+                    <button class="tab-button flex-1 text-center px-4 py-3 text-sm sm:text-base font-medium" data-tab="4">
+                        4. Live Experiences
+                    </button>
+                    <button class="tab-button flex-1 text-center px-4 py-3 text-sm sm:text-base font-medium" data-tab="5">
+                        5. Practical Example
+                    </button>
+                </nav>
+            </div>
+
+            <!-- Tab Content Panels -->
+            <div class="p-6 md:p-8">
+                <!-- Tab 1: Foundational Content -->
+                <div id="tab-1" class="tab-content active">
+                    <h2 class="text-2xl font-bold mb-4">1. Foundational Content (The "What")</h2>
+                    <p class="mb-6 text-gray-600">This is the core knowledge your team needs to acquire. We partner with you to develop this content in various formats to cater to different learning preferences and manage cognitive load effectively.</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 bg-[color:var(--brand-red)] p-3 rounded-lg text-white">
+                                <!-- Icon: Video -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg">Video Series</h3>
+                                <p class="text-gray-500">Short, engaging micro-learning videos focused on specific concepts or tasks.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                             <div class="flex-shrink-0 bg-[color:var(--brand-red)] p-3 rounded-lg text-white">
+                                <!-- Icon: Podcast -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" /></svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg">Podcasts</h3>
+                                <p class="text-gray-500">Conversational interviews with internal experts, leaders, or high-performers.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                             <div class="flex-shrink-0 bg-[color:var(--brand-red)] p-3 rounded-lg text-white">
+                                <!-- Icon: Guide -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg">Interactive Guides</h3>
+                                <p class="text-gray-500">Digital newsletters, intranet articles, or documents with embedded resources.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                             <div class="flex-shrink-0 bg-[color:var(--brand-red)] p-3 rounded-lg text-white">
+                                <!-- Icon: Document -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg">Key Documents</h3>
+                                <p class="text-gray-500">A centralised repository of key research, frameworks, and presentation slides.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 text-center">
+                        <button id="more-ideas-button" class="bg-[color:var(--brand-grey-5)] text-white px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">
+                            More Ideas...
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tab 2: Learning Environments -->
+                <div id="tab-2" class="tab-content">
+                    <h2 class="text-2xl font-bold mb-4">2. Learning Environments (The "Where")</h2>
+                    <p class="mb-6 text-gray-600">We structure the learning journey using a holistic framework to ensure a comprehensive experience. This approach provides a blueprint for how, when, and where learning can take place most effectively.</p>
+                    <div class="bg-[color:var(--brand-grey-2)] p-4 rounded-lg">
+                        <h3 class="font-semibold text-lg mb-2">The 7 Spaces for Learning Framework</h3>
+                        <p class="text-gray-600 mb-4">Select a learning space below to learn more about its role.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <button class="space-button" data-description="Environments for the passive consumption of content, crucial for information dissemination and initial exposure to new topics.">Watching Spaces</button>
+                            <button class="space-button" data-description="Private, individualised spaces where learning is self-directed and often done alone. It's ideal for foundational knowledge, reflection, and confidential practice.">Secret Spaces</button>
+                            <button class="space-button" data-description="Collaborative environments where learners construct knowledge together. This is the 'we' space for teamwork, discussion, and social learning.">Group Spaces</button>
+                            <button class="space-button" data-description="Spaces where learners create and share content. This act of creation solidifies understanding and contributes to a shared knowledge base.">Publishing Spaces</button>
+                            <button class="space-button" data-description="Environments where learners actively demonstrate skills and apply knowledge in a practical, observable way.">Performing Spaces</button>
+                            <button class="space-button" data-description="Live, synchronous events where the primary mode of learning is active involvement and contribution.">Participation Spaces</button>
+                            <button class="space-button" data-description="Spaces focused on the interpretation and analysis of information, where learning comes from finding insights and making sense of data.">Data Spaces</button>
+                        </div>
+                        <div id="space-description-container" class="bg-white p-4 rounded-md shadow-inner min-h-[100px] text-gray-700 leading-relaxed" style="display: none;">
+                            <!-- Description will be injected here by JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 3: AI-Powered Learning -->
+                <div id="tab-3" class="tab-content">
+                    <h2 class="text-2xl font-bold mb-4">3. AI-Powered Learning (The "How")</h2>
+                    <p class="mb-6 text-gray-600">This is where we can truly personalise and accelerate learning. We can integrate various AI assistants, including the bank's own Copilot tool, to provide instant support, feedback, and tailored learning paths.</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 bg-[color:var(--brand-red)] p-3 rounded-lg text-white">
+                                <!-- Icon: Chat bot -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" /></svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg">AI Study Assistant</h3>
+                                <p class="text-gray-500">A bot trained on your foundational content that can answer questions, create summaries, and generate practice quizzes 24/7.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                             <div class="flex-shrink-0 bg-[color:var(--brand-red)] p-3 rounded-lg text-white">
+                                <!-- Icon: Feedback -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" /></svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg">Personalised Feedback Bot</h3>
+                                <p class="text-gray-500">An AI that can review a draft email or report and provide instant feedback based on a defined set of best practices.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                             <div class="flex-shrink-0 bg-[color:var(--brand-red)] p-3 rounded-lg text-white">
+                                <!-- Icon: Research -->
+                               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg">Synthesis & Research Bots</h3>
+                                <p class="text-gray-500">Tools to help learners quickly analyse complex documents or research topics, accelerating their time to competency.</p>
+                            </div>
+                        </div>
+                         <div class="flex items-start space-x-4">
+                             <div class="flex-shrink-0 bg-[color:var(--brand-red)] p-3 rounded-lg text-white">
+                                <!-- Icon: Adaptive Paths -->
+                               <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h7" /></svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg">Adaptive Learning Paths</h3>
+                                <p class="text-gray-500">Intelligent systems that can recommend specific content or activities based on a learner's progress and performance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tab 4: Live Experiences -->
+                <div id="tab-4" class="tab-content">
+                    <h2 class="text-2xl font-bold mb-4">4. Live Experiences (The "With Whom")</h2>
+                    <p class="mb-6 text-gray-600">Human connection remains a vital component of deep learning and behaviour change. We integrate collaborative and expert-led sessions to solidify knowledge, build networks, and provide contextual support.</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 bg-[color:var(--brand-red)] p-3 rounded-lg text-white">
+                                <!-- Icon: Workshop -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg">F2F & Virtual Workshops</h3>
+                                <p class="text-gray-500">Hands-on, interactive sessions designed for skill practice, problem-solving, and team collaboration.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                             <div class="flex-shrink-0 bg-[color:var(--brand-red)] p-3 rounded-lg text-white">
+                                <!-- Icon: Coaching -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg">Coaching & Mentoring</h3>
+                                <p class="text-gray-500">Pairing learners with experienced practitioners or leaders for personalised, on-the-job guidance.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                             <div class="flex-shrink-0 bg-[color:var(--brand-red)] p-3 rounded-lg text-white">
+                                <!-- Icon: Webinar -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <!-- Monitor Frame -->
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                    <!-- Person 1 -->
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6.5 12.5a2 2 0 014 0"/>
+                                    <!-- Person 2 -->
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 12.5a2 2 0 014 0"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-lg">Webinars</h3>
+                                <p class="text-gray-500">Expert-led deep dives on specific topics, new updates, or complex case studies, with live Q&A.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 5: Practical Example -->
+                <div id="tab-5" class="tab-content">
+                    <h2 class="text-2xl font-bold mb-4">Practical Example: A Blended Learning Journey</h2>
+                    <p class="mb-6 text-gray-600">Let's imagine we're designing a 3-week training program for your team on a new <strong class="font-semibold text-[color:var(--brand-grey-5)]">Client Engagement Model</strong>. Here’s how we could structure it by combining elements from the toolkit.</p>
+                    
+                    <div class="space-y-6">
+                        <!-- Week 1 -->
+                        <div class="p-4 border border-[color:var(--brand-grey-3)] rounded-lg">
+                            <h3 class="font-bold text-xl text-[color:var(--brand-red)] mb-2">Week 1: Laying the Foundation</h3>
+                            <p class="font-semibold mb-3">Focus: Understanding the 'why' and 'what' of the new model.</p>
+                            <ul class="list-disc list-inside text-gray-600 space-y-2">
+                                <li><strong class="font-semibold text-gray-700">Foundational Content:</strong> Learners consume a 5-part video series and listen to a podcast with the Head of Division.</li>
+                                <li><strong class="font-semibold text-gray-700">AI-Powered Learning:</strong> Learners interact with an AI Study Assistant trained on the new model's documentation to answer their initial questions.</li>
+                            </ul>
+                        </div>
+                        <!-- Week 2 -->
+                        <div class="p-4 border border-[color:var(--brand-grey-3)] rounded-lg">
+                            <h3 class="font-bold text-xl text-[color:var(--brand-red)] mb-2">Week 2: Exploring with AI Tools</h3>
+                            <p class="font-semibold mb-3">Focus: Learning how AI can make applying the new model easier.</p>
+                            <ul class="list-disc list-inside text-gray-600 space-y-2">
+                                <li><strong class="font-semibold text-gray-700">Live Experience:</strong> A live webinar demonstrates how to use different AI bots (like a Research bot and a Synthesis bot) in their workflow.</li>
+                                <li><strong class="font-semibold text-gray-700">Learning Environment (Secret Space):</strong> Learners complete a challenge: "Use Copilot to draft a client follow-up email." A Personal Feedback Bot provides instant suggestions.</li>
+                            </ul>
+                        </div>
+                        <!-- Week 3 -->
+                        <div class="p-4 border border-[color:var(--brand-grey-3)] rounded-lg">
+                             <h3 class="font-bold text-xl text-[color:var(--brand-red)] mb-2">Week 3: Application and Collaboration</h3>
+                            <p class="font-semibold mb-3">Focus: Applying new skills in a real-world context and sharing insights.</p>
+                             <ul class="list-disc list-inside text-gray-600 space-y-2">
+                                <li><strong class="font-semibold text-gray-700">Learning Environment (Performing Space):</strong> Learners apply the model in their daily work, supported by their managers and designated mentors.</li>
+                                <li><strong class="font-semibold text-gray-700">Live Experience (Group Space):</strong> A final face-to-face workshop where teams share experiences, troubleshoot challenges, and present their successes.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Modal for More Foundational Content Ideas -->
+    <div id="more-ideas-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 items-center justify-center hidden">
+        <div class="bg-white rounded-lg shadow-xl p-6 md:p-8 w-11/12 max-w-2xl relative mx-4">
+            <button id="close-modal-button" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            </button>
+            <h3 class="text-2xl font-bold mb-2 text-[color:var(--brand-red)]">Additional Foundational Content Ideas</h3>
+            <p class="mb-6 text-gray-600">These are additional content types we can create in collaboration with your business unit to form a robust knowledge base for your team.</p>
+            <ul class="list-disc list-inside space-y-3 text-gray-700">
+                <li><strong>Research Activity:</strong> Structured tasks that require learners to find and synthesise information.</li>
+                <li><strong>Micro-credential Courses:</strong> Short, certified courses on specific skills or topics.</li>
+                <li><strong>Short Course:</strong> A more in-depth, multi-module course on a broader subject area.</li>
+                <li><strong>Presentation:</strong> A comprehensive slide deck that can be used for self-study or group presentations.</li>
+                <li><strong>Coaching or Mentoring Series:</strong> A structured program connecting learners with experts for guided development.</li>
+                <li><strong>Study Mode:</strong> A self-directed learning module with curated resources, guides, and self-assessment tools.</li>
+                <li><strong>Immersive Environments:</strong> Simulations or virtual reality (VR) scenarios that allow for safe, hands-on practice of complex tasks.</li>
+                <li><strong>Gamified Learning:</strong> Applying game-like elements (e.g., points, leaderboards) to learning modules to increase engagement and motivation.</li>
+                <li><strong>Game Challenges:</strong> Specific, often competitive, tasks or scenarios designed to test knowledge and application of skills in a fun format.</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script>
+        // JavaScript for tab functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const tabId = button.dataset.tab;
+
+                    // Deactivate all buttons and content
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+
+                    // Activate the clicked button and corresponding content
+                    button.classList.add('active');
+                    document.getElementById('tab-' + tabId).classList.add('active');
+                });
+            });
+
+            // JavaScript for the "More Ideas" Modal
+            const openModalButton = document.getElementById('more-ideas-button');
+            const closeModalButton = document.getElementById('close-modal-button');
+            const modal = document.getElementById('more-ideas-modal');
+
+            if (openModalButton && closeModalButton && modal) {
+                openModalButton.addEventListener('click', () => {
+                    modal.classList.remove('hidden');
+                    modal.classList.add('flex'); // Use flex to center the content
+                });
+
+                const hideModal = () => {
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex');
+                };
+
+                closeModalButton.addEventListener('click', hideModal);
+
+                // Close modal when clicking on the background overlay
+                modal.addEventListener('click', (event) => {
+                    if (event.target === modal) {
+                       hideModal();
+                    }
+                });
+            }
+
+            // JavaScript for the 7 Spaces functionality
+            const spaceButtons = document.querySelectorAll('.space-button');
+            const descriptionContainer = document.getElementById('space-description-container');
+
+            if (spaceButtons.length > 0 && descriptionContainer) {
+                // Set an initial state when the page loads
+                const initialActiveButton = spaceButtons[0];
+                initialActiveButton.classList.add('active');
+                descriptionContainer.textContent = initialActiveButton.dataset.description;
+                descriptionContainer.style.display = 'block';
+
+                spaceButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        // Remove active class from all space buttons
+                        spaceButtons.forEach(btn => btn.classList.remove('active'));
+
+                        // Add active class to the clicked button
+                        button.classList.add('active');
+
+                        // Update and show the description
+                        descriptionContainer.textContent = button.dataset.description;
+                        descriptionContainer.style.display = 'block';
+                    });
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
